@@ -86,7 +86,7 @@ class sys_resolve_atoms:
         
         sorted_indices = np.argsort(autovalores)
         self._autovalores = autovalores[sorted_indices]
-        self._autovetores = autovetores[:, sorted_indices]
+        self._autovetores = autovetores[sorted_indices]
 
     def get_autovalores(self):
         """
@@ -108,5 +108,5 @@ class sys_resolve_atoms:
     
     def get_frequencia_angular(self):
         self._calculate_system_values()
-        autovalores_positivos = self._autovalores[self._autovalores >= 0]
-        return np.sqrt(autovalores_positivos)
+        autovalores_positivos = self._autovalores
+        return autovalores_positivos
