@@ -86,7 +86,7 @@ class sys_resolve_atoms:
         
         sorted_indices = np.argsort(autovalores)
         self._autovalores = autovalores[sorted_indices]
-        self._autovetores = autovetores[sorted_indices]
+        self._autovetores = autovetores[:,sorted_indices]
 
     def get_autovalores(self):
         """
